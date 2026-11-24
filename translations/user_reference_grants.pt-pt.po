@@ -1,0 +1,81 @@
+# Portuguese (Portugal) translation of User Reference Grants.
+msgid ""
+msgstr ""
+"Project-Id-Version: user_reference_grants\n"
+"Language: pt-pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "User Reference Grants"
+msgstr "Acesso por referência a utilizador"
+
+msgid "User reference grants"
+msgstr "Acesso por referência a utilizador"
+
+msgid "Grants view access to content for the users referenced in its user reference fields, with optional per-relationship field visibility. Uses node grants, so it also applies to Views listings."
+msgstr "Dá acesso de leitura a um conteúdo aos utilizadores indicados nos seus campos de referência a utilizador, podendo limitar os campos visíveis conforme a relação. Usa node grants, por isso aplica-se também às listagens Views."
+
+msgid "Content types and user reference fields that grant view access."
+msgstr "Tipos de conteúdo e campos de referência a utilizador que dão acesso de leitura."
+
+msgid "Administer user reference grants"
+msgstr "Configurar o acesso por referência a utilizador"
+
+msgid "Choose which content types and user reference fields grant view access, and which fields those users can see."
+msgstr "Escolher que tipos de conteúdo e campos de referência a utilizador dão acesso de leitura, e que campos esses utilizadores podem ver."
+
+msgid "Bypass user reference field limits"
+msgstr "Ver todos os campos (ignorar limites do acesso por referência)"
+
+msgid "See all fields of content even when referenced in a field with limited field visibility. Give this to staff roles."
+msgstr "Ver todos os campos do conteúdo, mesmo quando referido num campo com visibilidade limitada. Dar aos papéis da equipa."
+
+msgid "About"
+msgstr "Sobre"
+
+msgid "User Reference Grants gives <strong>view</strong> access to a piece of content to the users referenced in its user reference fields (for example \"Teacher\" or \"Reviewer\"). It never grants update or delete access."
+msgstr "O Acesso por referência a utilizador dá acesso de <strong>leitura</strong> a um conteúdo aos utilizadores indicados nos seus campos de referência a utilizador (por exemplo \"Docente\" ou \"Avaliador\"). Nunca dá acesso para editar nem apagar."
+
+msgid "It uses the node grants system, so access also applies to Views listings and search. Grants are added to those of other node access modules, such as Content Access, when all of them use the same priority (0)."
+msgstr "Usa o sistema de node grants, por isso o acesso aplica-se também às listagens Views e à pesquisa. As chaves somam-se às de outros módulos de acesso, como o Content Access, desde que todos usem a mesma prioridade (0)."
+
+msgid "For each reference field you can also limit the fields those users can see. Roles with the \"Bypass user reference field limits\" permission always see all fields."
+msgstr "Em cada campo de referência pode também limitar os campos que esses utilizadores veem. Os papéis com a permissão \"Ver todos os campos (ignorar limites do acesso por referência)\" veem sempre todos os campos."
+
+msgid "After changing which fields grant access, rebuild content access permissions."
+msgstr "Depois de mudar os campos que dão acesso, reconstrua as permissões de conteúdo."
+
+msgid "Users referenced in the selected fields can <strong>view</strong> (never edit or delete) the published content of that type in which they are referenced. Other access rules (Content Access, roles, field permissions) still apply."
+msgstr "Os utilizadores indicados nos campos assinalados passam a poder <strong>ver</strong> (nunca editar nem apagar) os conteúdos publicados desse tipo em que são referidos. Os restantes acessos (Content Access, papéis, permissões de campo) mantêm-se."
+
+msgid "Important:"
+msgstr "Importante:"
+
+msgid "other node access modules on these content types must use priority 0 (Content Access uses 0 by default). After changing which fields grant access, rebuild content access permissions, preferably off-peak and after a database backup."
+msgstr "os outros módulos de acesso nestes tipos de conteúdo têm de usar a prioridade 0 (o Content Access usa 0 por omissão). Depois de mudar os campos que dão acesso, reconstrua as permissões de conteúdo, de preferência fora de horas e depois de uma cópia de segurança da base de dados."
+
+msgid "No content type has a user reference field."
+msgstr "Nenhum tipo de conteúdo tem campos de referência a utilizador."
+
+msgid "@label (@bundle)"
+msgstr "@label (@bundle)"
+
+msgid "Grant view access to the users referenced in this field"
+msgstr "Dar acesso de leitura aos utilizadores indicados neste campo"
+
+msgid "Limit the fields these users can see"
+msgstr "Limitar os campos que estes utilizadores veem"
+
+msgid "If unchecked, they see every field they would normally see."
+msgstr "Se não estiver assinalado, veem todos os campos que normalmente veriam."
+
+msgid "Fields these users can see"
+msgstr "Campos que estes utilizadores veem"
+
+msgid "Title, author and other base fields are always visible."
+msgstr "O título, o autor e os outros campos de base são sempre visíveis."
+
+msgid "The fields that grant access changed. Rebuild content access permissions to apply the change to existing content."
+msgstr "Os campos que dão acesso mudaram. Reconstrua as permissões de conteúdo para aplicar a alteração aos conteúdos existentes."

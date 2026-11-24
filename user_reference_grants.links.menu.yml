@@ -1,0 +1,5 @@
+user_reference_grants.settings:
+  title: 'User reference grants'
+  description: 'Content types and user reference fields that grant view access.'
+  route_name: user_reference_grants.settings
+  parent: user.admin_index

@@ -1,0 +1,23 @@
+user_reference_grants.settings:
+  type: config_object
+  label: 'User reference grants settings'
+  mapping:
+    bundles:
+      type: sequence
+      label: 'Content types'
+      sequence:
+        type: sequence
+        label: 'User reference fields that grant view access'
+        sequence:
+          type: mapping
+          label: 'Reference field settings'
+          mapping:
+            limit_fields:
+              type: boolean
+              label: 'Limit the fields these users can see'
+            visible_fields:
+              type: sequence
+              label: 'Visible fields'
+              sequence:
+                type: string
+                label: 'Field machine name'

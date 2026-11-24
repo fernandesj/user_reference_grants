@@ -1,0 +1,7 @@
+user_reference_grants.settings:
+  path: '/admin/config/people/user-reference-grants'
+  defaults:
+    _form: '\Drupal\user_reference_grants\Form\SettingsForm'
+    _title: 'User reference grants'
+  requirements:
+    _permission: 'administer user reference grants'

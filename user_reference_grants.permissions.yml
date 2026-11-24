@@ -1,0 +1,9 @@
+administer user reference grants:
+  title: 'Administer user reference grants'
+  description: 'Choose which content types and user reference fields grant view access, and which fields those users can see.'
+  restrict access: true
+
+bypass user reference field limits:
+  title: 'Bypass user reference field limits'
+  description: 'See all fields of content even when referenced in a field with limited field visibility. Give this to staff roles.'
+  restrict access: true

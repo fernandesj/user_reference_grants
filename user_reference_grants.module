@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Procedural hook wrappers for Drupal 10.
+ *
+ * On Drupal 11.1+ the #[LegacyHook] attribute makes Drupal skip these
+ * functions and call \Drupal\user_reference_grants\Hook\UserReferenceGrantsHooks
+ * directly. They can be removed once Drupal 10 support is dropped.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Access\AccessResultInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Hook\Attribute\LegacyHook;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+use Drupal\user_reference_grants\Hook\UserReferenceGrantsHooks;
+
+/**
+ * Implements hook_help().
+ */
+#[LegacyHook]
+function user_reference_grants_help($route_name, RouteMatchInterface $route_match): ?string {
+  return \Drupal::service(UserReferenceGrantsHooks::class)->help((string) $route_name, $route_match);
+}
+
+/**
+ * Implements hook_node_grants().
+ */
+#[LegacyHook]
+function user_reference_grants_node_grants(AccountInterface $account, $operation): array {
+  return \Drupal::service(UserReferenceGrantsHooks::class)->nodeGrants($account, (string) $operation);
+}
+
+/**
+ * Implements hook_node_access_records().
+ */
+#[LegacyHook]
+function user_reference_grants_node_access_records(NodeInterface $node): array {
+  return \Drupal::service(UserReferenceGrantsHooks::class)->nodeAccessRecords($node);
+}
+
+/**
+ * Implements hook_entity_field_access().
+ */
+#[LegacyHook]
+function user_reference_grants_entity_field_access($operation, FieldDefinitionInterface $field_definition, AccountInterface $account, ?FieldItemListInterface $items = NULL): AccessResultInterface {
+  return \Drupal::service(UserReferenceGrantsHooks::class)->entityFieldAccess((string) $operation, $field_definition, $account, $items);
+}

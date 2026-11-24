@@ -1,0 +1,14 @@
+# Drupal.org GitLab CI template: runs PHPUnit, PHPCS, PHPStan, cspell and
+# eslint/stylelint on every push and merge request.
+# https://project.pages.drupalcode.org/gitlab_templates/
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - '/includes/include.drupalci.main.yml'
+      - '/includes/include.drupalci.variables.yml'
+      - '/includes/include.drupalci.workflows.yml'
+
+variables:
+  # Also test on the previous major version (Drupal 10).
+  OPT_IN_TEST_PREVIOUS_MAJOR: '1'

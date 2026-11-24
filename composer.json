@@ -1,0 +1,14 @@
+{
+    "name": "drupal/user_reference_grants",
+    "description": "Grants view access to content for the users referenced in its user reference fields, with optional per-relationship field visibility.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/user_reference_grants",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/user_reference_grants",
+        "source": "https://git.drupalcode.org/project/user_reference_grants"
+    },
+    "require": {
+        "drupal/core": "^10.3 || ^11 || ^12"
+    }
+}

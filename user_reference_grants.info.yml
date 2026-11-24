@@ -1,0 +1,9 @@
+name: 'User Reference Grants'
+type: module
+description: 'Grants view access to content for the users referenced in its user reference fields, with optional per-relationship field visibility. Uses node grants, so it also applies to Views listings.'
+package: 'Access control'
+core_version_requirement: ^10.3 || ^11 || ^12
+dependencies:
+  - drupal:node
+  - drupal:user
+configure: user_reference_grants.settings

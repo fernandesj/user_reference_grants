@@ -1,0 +1,4 @@
+services:
+  Drupal\user_reference_grants\Hook\UserReferenceGrantsHooks:
+    class: Drupal\user_reference_grants\Hook\UserReferenceGrantsHooks
+    arguments: ['@config.factory']

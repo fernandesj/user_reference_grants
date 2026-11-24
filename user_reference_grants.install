@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install and uninstall functions for User Reference Grants.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_uninstall().
+ */
+function user_reference_grants_uninstall(): void {
+  // Ask for a rebuild so this module's grants are removed from node_access.
+  // Same as node_access_needs_rebuild(TRUE), without the procedural API.
+  \Drupal::state()->set('node.node_access_needs_rebuild', TRUE);
+}
